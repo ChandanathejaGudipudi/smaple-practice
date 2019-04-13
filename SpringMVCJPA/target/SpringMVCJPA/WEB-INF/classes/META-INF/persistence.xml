@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="myUnit" transaction-type="RESOURCE_LOCAL">
+	    <class>com.cts.employee.entity.AssociateSummary</class>
+	    <class>com.cts.employee.entity.AssociateSeatChangeDetails</class>
+	    <class>com.cts.employee.entity.ProjectDetails</class>
+	    <class>com.cts.employee.entity.ProjectManagersDetails</class>
+	    <class>com.cts.employee.entity.CtsGrade</class>
+	    <class>com.cts.employee.entity.ShiftTimings</class>
+	    <class>com.cts.employee.entity.InvoiceSummary</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="none" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.transaction.flush_before_completion" value="true" />
+			<property name="hibernate.cache.provider_class" value="org.hibernate.cache.HashtableCacheProvider" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
